@@ -5,4 +5,5 @@ proyek 1
   
 proyek 2
 <img width="1360" height="683" alt="Screenshot 2025-12-13 110623" src="https://github.com/user-attachments/assets/043f7743-26c2-44a4-bf39-27f57290bf4d" />
-<img width="1360" height="682" alt="Screenshot 2025-12-13 110452" src="https://github.com/user-attachments/assets/98c2d1b9-8444-4451-b8ea-c05d1d6f339f" />
+<img width="1360" height="686" alt="111" src="https://github.com/user-attachments/assets/be62790b-ec14-4d7d-a9ad-1bf6d9c0282a" />
+
