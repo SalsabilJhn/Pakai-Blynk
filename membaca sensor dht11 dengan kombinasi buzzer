@@ -1,0 +1,85 @@
+#define BLYNK_PRINT Serial
+
+#define BLYNK_TEMPLATE_ID "TMPL62UTqArFB"
+#define BLYNK_TEMPLATE_NAME "UJK 2"
+#define BLYNK_AUTH_TOKEN "1SRfXv0SGB2vWcoQPLOjfVa3m7IzK50r"
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+char ssid[] = "lab electronic";
+char pass[] = "Labelec24!";
+
+#include <LCD_I2C.h>
+LCD_I2C lcd(0x27, 16, 2);
+
+#include "DHT.h"
+#define DHTPIN D6
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+int getV3;
+BLYNK_WRITE(V3){
+  getV3 = param.asInt();
+}
+int getV4;
+BLYNK_WRITE(V4){
+  getV4 = param.asInt();
+}
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
+  dht.begin();
+  lcd.begin();
+  lcd.backlight();
+  pinMode(D5, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  delay(2000);
+  Blynk.run();
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+   lcd.setCursor(0, 0);
+   lcd.print("t: ");
+   lcd.print(t);
+   lcd.setCursor(9, 0);
+   lcd.print("h: ");
+   lcd.print(h);
+
+   lcd.setCursor(0, 1);
+   lcd.print("s:");
+   lcd.print(getV3);
+   lcd.setCursor(5, 1);
+   lcd.print("e:");
+   lcd.setCursor(11, 1);
+   lcd.print("b:");
+
+  Blynk.virtualWrite(V0, "WIIII");
+  Blynk.virtualWrite(V1, t);
+  Blynk.virtualWrite(V2, h);
+
+  if (getV4 == 1){
+    lcd.setCursor(7, 1);
+    lcd.print("ON ");
+  }else{
+    lcd.setCursor(7, 1);
+    lcd.print("OFF");
+  }
+  if (t >= getV3 && getV4 == 1){
+    digitalWrite(D5, 1);
+    Blynk.virtualWrite(V5, 1);
+    lcd.setCursor(13, 1);
+    lcd.print("ON ");
+  }
+  else{
+    digitalWrite(D5, 0);
+    Blynk.virtualWrite(V5, 0);
+    lcd.setCursor(13, 1);
+    lcd.print("OFF");
+  }
+
+
+}
