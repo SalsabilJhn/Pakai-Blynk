@@ -1,0 +1,68 @@
+Tidak ada yang dipilih 
+
+Lewatkan ke konten
+Menggunakan Gmail dengan pembaca layar
+in:sent 
+Percakapan
+46% dari 15 GB digunakan
+Persyaratan · Privasi · Kebijakan Program
+Aktivitas akun terakhir: 1 jam yang lalu
+Detail
+#define BLYNK_PRINT Serial
+
+#define BLYNK_TEMPLATE_ID "TMPL6BCmxZqFM"
+#define BLYNK_TEMPLATE_NAME "UJK 1"
+#define BLYNK_AUTH_TOKEN "GzDJ6w9fedqwXIVae4wfwhM4slTeCLYp"
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+char ssid[] = "lab electronic";
+char pass[] = "Labelec24!";
+
+#define PU 14
+#define PB 12
+#define JS 13
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(PU, INPUT);
+  pinMode(PB, INPUT);
+  pinMode(JS, INPUT);
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  Blynk.run();
+  if (digitalRead(PU) == 1){
+    Blynk.virtualWrite(V0, "Pintu Utama Terbuka");
+    Blynk.virtualWrite(V3, 1);
+    delay(500);
+  }else{
+    Blynk.virtualWrite(V0, "Pintu Utama Tertutup");
+    Blynk.virtualWrite(V3, 0);
+    delay(500);
+  }
+    if (digitalRead(PB) == 1){
+    Blynk.virtualWrite(V1, "Pintu Belakang Terbuka");
+    Blynk.virtualWrite(V4, 1);
+    delay(500);
+  }else{
+    Blynk.virtualWrite(V1, "Pintu Belakang Tertutup");
+    Blynk.virtualWrite(V4, 0);
+    delay(500);
+  }
+    if (digitalRead(JS) == 1){
+    Blynk.virtualWrite(V2, "Jendela Samping Terbuka");
+    Blynk.virtualWrite(V5, 1);
+    delay(500);
+  }else{
+    Blynk.virtualWrite(V2, "Jendela Samping Tertutup");
+    Blynk.virtualWrite(V5, 0);
+    delay(500);
+  }
+}
+UJK_1.ino
+Menampilkan UJK_1.ino.
