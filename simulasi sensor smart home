@@ -1,13 +1,3 @@
-Tidak ada yang dipilih 
-
-Lewatkan ke konten
-Menggunakan Gmail dengan pembaca layar
-in:sent 
-Percakapan
-46% dari 15 GB digunakan
-Persyaratan · Privasi · Kebijakan Program
-Aktivitas akun terakhir: 1 jam yang lalu
-Detail
 #define BLYNK_PRINT Serial
 
 #define BLYNK_TEMPLATE_ID "TMPL6TylPl8Oy"
