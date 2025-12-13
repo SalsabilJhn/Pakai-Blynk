@@ -1,8 +1,8 @@
 #define BLYNK_PRINT Serial
 
-#define BLYNK_TEMPLATE_ID "TMPL62UTqArFB"
-#define BLYNK_TEMPLATE_NAME "UJK 2"
-#define BLYNK_AUTH_TOKEN "1SRfXv0SGB2vWcoQPLOjfVa3m7IzK50r"
+#define BLYNK_TEMPLATE_ID "TMPL6NZiUJa9s"
+#define BLYNK_TEMPLATE_NAME "proyek2"
+#define BLYNK_AUTH_TOKEN "ZxIdgIGxgCc-G-vlq2H-7wH91LVklS5f"
 
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
