@@ -8,9 +8,9 @@ Sistem ini memungkinkan kontrol dan monitoring status pintu utama, pintu belakan
 4. micro switch 3 buah  
    Dengan format kode:   
    PU ---+  
-         |  
+ 
    PB ---+--> [ESP8266 pin input]  
-         | 
+
    JS ---+  
 
 ESP8266 pin output --> [Relay 1 & Relay 2] --> [LED indikator]  
