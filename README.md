@@ -7,8 +7,7 @@ Sistem ini memungkinkan kontrol dan monitoring status pintu utama, pintu belakan
 3. led 3 buah
 4. micro switch 3 buah  
    Dengan format kode:   
-  
-   PU ---+
+     PU ---+
          |
    PB ---+--> [ESP8266 pin input]
          |
@@ -19,6 +18,7 @@ ESP8266 pin output --> [Relay 1 & Relay 2] --> [LED indikator]
 - ESP membaca status switch
 - Relay menyalakan LED
 - Status dikirim ke Blynk
+
 
 
 
