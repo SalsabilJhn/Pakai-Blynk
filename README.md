@@ -10,7 +10,7 @@ Sistem ini memungkinkan kontrol dan monitoring status pintu utama, pintu belakan
    PU ---+  
          |  
    PB ---+--> [ESP8266 pin input]  
-         |  
+         | 
    JS ---+  
 
 ESP8266 pin output --> [Relay 1 & Relay 2] --> [LED indikator]  
