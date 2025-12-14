@@ -1,5 +1,24 @@
 # ss proyek menggunakan Blynk  
-proyek 1
+proyek 1 : Simulasi Monitoring Status Pintu Utama, Pintu Belakang, dan Jendela Samping.  
+
+Sistem ini memungkinkan kontrol dan monitoring status pintu utama, pintu belakang, dan jendela samping menggunakan aplikasi Blynk melalui virtual pins. Implementasi menggunakan:  
+1. ESP8266
+2. relay 2 buah  
+3. led 3 buah
+4. micro switch 3 buah
+Dengan format code block:
+   PU ---+
+         |
+   PB ---+--> [ESP8266 pin input]
+         |
+   JS ---+
+
+ESP8266 pin output --> [Relay 1 & Relay 2] --> [LED indikator]
+
+- ESP membaca status switch
+- Relay menyalakan LED
+- Status dikirim ke Blynk
+
 <img width="1360" height="688" alt="Screenshot 2025-12-13 101854" src="https://github.com/user-attachments/assets/5869d115-41be-4dee-b8db-0d390f9ad1dc" />
 <img width="1360" height="691" alt="Screenshot 2025-12-13 145229" src="https://github.com/user-attachments/assets/4f5f6b96-daab-4822-8b5a-dee29bad8a5a" />
   
