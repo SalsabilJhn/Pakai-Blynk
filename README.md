@@ -26,10 +26,10 @@ ESP8266 pin output --> [Relay 1 & Relay 2] --> [LED indikator]
   
 Proyek 2: Simulasi dan Kontrol Suhu dan Kelembaban Udara.  
 Sistem ini memungkinkan untuk menampilkan suhu dan kelembaban udara melalui display LCD. Yang kemudian alarm akan berbunyi ketika suhu sudah melewati batas yang ditetapkan. Implementasi ini membutuhkan:  
-1. DHT11
-2. Buzzer
-3. LCD I2C
-4. ESP8266
+1. DHT11 1 buah
+2. Buzzer 1 buah
+3. LCD I2C 1 buah
+4. ESP8266 1 buah
 
 <img width="1360" height="683" alt="Screenshot 2025-12-13 110623" src="https://github.com/user-attachments/assets/043f7743-26c2-44a4-bf39-27f57290bf4d" />
 <img width="1360" height="686" alt="111" src="https://github.com/user-attachments/assets/be62790b-ec14-4d7d-a9ad-1bf6d9c0282a" />
